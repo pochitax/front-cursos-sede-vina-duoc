@@ -26,8 +26,14 @@
     }
 }
 .featured-top {
-    padding: 100px 0;
+    //padding: 100px 0;
     .font-italic {
         font-size: 26px;
     }
+    .btn {
+        padding: 30px 20px;
+    }
+}
+#carouselSlides {
+    margin-bottom: -50px;
 }

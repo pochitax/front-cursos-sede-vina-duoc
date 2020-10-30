@@ -109,7 +109,7 @@ ul ol {
 }
 
 dt {
-  font-weight: 700;
+  font-weight: 500;
 }
 
 dd {
@@ -508,7 +508,7 @@ kbd {
 kbd kbd {
   padding: 0;
   font-size: 100%;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 pre {
@@ -4607,7 +4607,7 @@ input[type=button].btn-block {
   display: inline-block;
   padding: 0.25em 0.4em;
   font-size: 75%;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1;
   text-align: center;
   white-space: nowrap;
@@ -4774,7 +4774,7 @@ a.badge-dark:focus, a.badge-dark.focus {
 }
 
 .alert-link {
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .alert-dismissible {
@@ -5245,7 +5245,7 @@ a.badge-dark:focus, a.badge-dark.focus {
 .close {
   float: right;
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1;
   color: #000;
   text-shadow: 0 1px 0 #fff;
@@ -9673,7 +9673,7 @@ button.bg-dark:focus {
 }
 
 .font-weight-bold {
-  font-weight: 700 !important;
+  font-weight: 500 !important;
 }
 
 .font-weight-bolder {
@@ -9918,11 +9918,15 @@ h3 {
   height: 50px;
 }
 
-.featured-top {
-  padding: 100px 0;
-}
 .featured-top .font-italic {
   font-size: 26px;
+}
+.featured-top .btn {
+  padding: 30px 20px;
+}
+
+#carouselSlides {
+  margin-bottom: -50px;
 }
 
 /*# sourceMappingURL=cursos.css.map */
