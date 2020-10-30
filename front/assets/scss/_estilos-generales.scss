@@ -1,0 +1,33 @@
+
+/* Generales */ 
+
+.h3 {
+    font-size: 22px;
+}
+.display-4 {
+    font-size: 42px;
+}
+.font-italic {
+    font-family: 'Merriweather', serif;
+}
+
+/* Custom */
+
+.header-top {
+    height: 100px;
+    .row {
+        height: 100px;
+    }
+}
+.header-logo {
+    img {
+        width: 222px;
+        height: 50px;
+    }
+}
+.featured-top {
+    padding: 100px 0;
+    .font-italic {
+        font-size: 26px;
+    }
+}

@@ -9891,6 +9891,38 @@ h3 {
     border-color: #dee2e6;
   }
 }
-/* Variables */
+/* Personalizado */
+/* Generales */
+.h3 {
+  font-size: 22px;
+}
+
+.display-4 {
+  font-size: 42px;
+}
+
+.font-italic {
+  font-family: "Merriweather", serif;
+}
+
+/* Custom */
+.header-top {
+  height: 100px;
+}
+.header-top .row {
+  height: 100px;
+}
+
+.header-logo img {
+  width: 222px;
+  height: 50px;
+}
+
+.featured-top {
+  padding: 100px 0;
+}
+.featured-top .font-italic {
+  font-size: 26px;
+}
 
 /*# sourceMappingURL=cursos.css.map */
