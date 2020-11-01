@@ -132,5 +132,21 @@
     }
 }
 .footer {
-    
+    .logo-footer {
+        width: 155px;
+        height: 36px;
+        display: block;
+    }
+    p, .h5, h5, .nav-link {
+        font-size: 13px;
+    }
+    .font-italic {
+        font-family: $font-family-sans-serif;
+    }
+    .nav-link {
+        color: $white;
+        &:hover {
+            color: $primary;
+        }
+    }
 }

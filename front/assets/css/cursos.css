@@ -10009,4 +10009,22 @@ h3 {
   color: #FFB800;
 }
 
+.footer .logo-footer {
+  width: 155px;
+  height: 36px;
+  display: block;
+}
+.footer p, .footer .h5, .footer h5, .footer .nav-link {
+  font-size: 13px;
+}
+.footer .font-italic {
+  font-family: Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.footer .nav-link {
+  color: #fff;
+}
+.footer .nav-link:hover {
+  color: #FFB800;
+}
+
 /*# sourceMappingURL=cursos.css.map */
