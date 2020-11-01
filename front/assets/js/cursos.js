@@ -41,8 +41,7 @@ $( document ).ready(function() {
 		//events if scrolled or window resized 
     });
     
-    // Anchor links
-
+    // Anchor links courses top
 
     $('.tabs-courses a').click(function (e) {
         e.preventDefault()
@@ -54,10 +53,5 @@ $( document ).ready(function() {
         $('html, body').animate({scrollTop:$('#coursesSedeVina').position().top}, 'slow');
         e.preventDefault();
     });
-          
-          
-          
-          
-
-
+     
 });
