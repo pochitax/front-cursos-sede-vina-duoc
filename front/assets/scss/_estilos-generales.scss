@@ -84,7 +84,7 @@
     .card-link-course {
         a {
             position: relative;
-            padding-left: 30px;
+            padding-left: 20px;
             font-size: 12px;
             color: $black;
             i {
@@ -96,7 +96,7 @@
                 display: none;
                 content: '';
                 position: absolute;
-                left: 30px;
+                left: 20px;
                 right: 0;
                 height: 2px;
                 bottom: -2px;
@@ -109,6 +109,11 @@
                 }
                 &::before {
                     display: block;
+                }
+            }
+            &.pl-0 {
+                &::before {
+                    left: 0;
                 }
             }
         }
