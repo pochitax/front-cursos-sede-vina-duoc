@@ -9905,6 +9905,10 @@ h3 {
   font-family: "Merriweather", serif;
 }
 
+.bg-gray {
+  background-color: #EFEFEF;
+}
+
 /* Equal height */
 .row-eq-height {
   display: -webkit-box;
