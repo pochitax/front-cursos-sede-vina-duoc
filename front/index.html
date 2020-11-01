@@ -113,7 +113,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <ul class="nav nav-pills tabs-courses" id="myTab" role="tablist">
+                            <ul class="nav nav-pills tabs-courses d-none d-md-flex" id="myTab" role="tablist">
                                 <!-- todos -->
                                 <li class="nav-item" role="presentation">
                                     <a class="nav-link active" id="all-courses-tab" data-toggle="tab" href="#all-courses" role="tab" aria-controls="all-courses" aria-selected="true">Todas <span class="d-sm-none d-lg-inline-block">las escuelas</span></a>
@@ -139,6 +139,18 @@
                                     <a class="nav-link health-course" id="health-tab" data-toggle="tab" href="#health" role="tab" aria-controls="health" aria-selected="false">Salud</a>
                                 </li>
                             </ul>
+                            <div class="dropdown d-block d-md-none">
+                                <button class="btn btn-primary dropdown-toggle"  type="button" data-toggle="dropdown">Dropdown Tab Example
+                                <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#all-courses" class="drop" data-toggle="tab">Todos los cursos</a></li>
+                                    <li><a href="#business" class="drop" data-toggle="tab">Administración y Negocios</a></li>
+                                    <li><a href="#comunication" class="drop" data-toggle="tab">Comunicación</a></li>
+                                    <li><a href="#design" class="drop" data-toggle="tab">Diseño</a></li>
+                                    <li><a href="#it-course" class="drop" data-toggle="tab">Informática y Telecomunicaciones</a></li>
+                                    <li><a href="#health" class="drop" data-toggle="tab">Salud</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

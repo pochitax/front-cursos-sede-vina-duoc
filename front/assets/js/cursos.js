@@ -53,5 +53,14 @@ $( document ).ready(function() {
         $('html, body').animate({scrollTop:$('#coursesSedeVina').position().top}, 'slow');
         e.preventDefault();
     });
+
+    // dropdown menu responsive
+
+    $(".drop").click(function(){
+        $(this).parent().removeClass("active");
+        var content = $(this).text();
+        $(".dropdown-toggle").text(content+" ");
+        $(".dropdown-toggle").append("<span class='caret'></span>")
+    });
      
 });
