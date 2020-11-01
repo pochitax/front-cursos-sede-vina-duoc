@@ -10243,6 +10243,16 @@ h3 {
   .call-to-action .btn {
     padding: 15px;
   }
+
+  .footer .logo-footer {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .footer img.acreditacion {
+    width: 100%;
+    border-top: 1px solid #fff;
+  }
 }
 
 /*# sourceMappingURL=cursos.css.map */
