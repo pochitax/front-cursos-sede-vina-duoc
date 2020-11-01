@@ -10251,6 +10251,9 @@ h3 {
 
   .footer img.acreditacion {
     width: 100%;
+    max-width: 361px;
+    margin-left: auto;
+    margin-right: auto;
     border-top: 1px solid #fff;
   }
 }
