@@ -39,7 +39,25 @@ $( document ).ready(function() {
 		//default '767px' if you disable pinBox in mobile or tablet
 		MinWidth : '767px'
 		//events if scrolled or window resized 
-	});
+    });
+    
+    // Anchor links
+
+
+    $('.tabs-courses a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+      })  
+          
+    $('.tabs-courses a.nav-link').on('click', function (e) {
+        var href = $(this).attr('href');
+        $('html, body').animate({scrollTop:$('#coursesSedeVina').position().top}, 'slow');
+        e.preventDefault();
+    });
+          
+          
+          
+          
 
 
 });
