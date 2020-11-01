@@ -10130,4 +10130,52 @@ h3 {
   color: #FFB800;
 }
 
+/* Responsive */
+/* ipad */
+/* móvil */
+@media (max-width: 767px) {
+  .h3, h3 {
+    font-size: 18px;
+  }
+
+  .h4, h4 {
+    font-size: 15px;
+  }
+
+  .display-4 {
+    font-size: 27px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .featured-top .font-italic {
+    font-size: 18px;
+  }
+
+  .featured-top .btn {
+    padding: 15px;
+  }
+
+  /* header */
+  .header-top {
+    height: 50px;
+  }
+  .header-top .row {
+    height: 50px;
+  }
+  .header-top .col-md-6 {
+    height: 50px;
+  }
+
+  .header-logo img {
+    width: 160px;
+  }
+
+  #carouselSlides {
+    margin-bottom: 0;
+  }
+}
+
 /*# sourceMappingURL=cursos.css.map */
