@@ -351,6 +351,13 @@
     #carouselSlides {
         margin-bottom: -20px;
     }
+    .card .card-text {
+        font-size: 12px;
+        line-height: 150%;
+    }
+    .call-to-action .btn {
+        padding: 15px;
+    }
 }
 
 /* móvil */
@@ -389,5 +396,12 @@
     }
     #carouselSlides {
         margin-bottom: 0;
+    }
+    .card .card-text {
+        font-size: 12px;
+        line-height: 150%;
+    }
+    .call-to-action .btn {
+        padding: 15px;
     }
 }
