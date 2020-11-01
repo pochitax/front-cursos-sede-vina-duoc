@@ -9905,6 +9905,14 @@ h3 {
   font-family: "Merriweather", serif;
 }
 
+/* Equal height */
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 /* Custom */
 .header-top {
   height: 100px;
@@ -9931,6 +9939,64 @@ h3 {
 
 .call-to-action .btn {
   padding: 30px 20px;
+}
+
+.card .card-title a {
+  color: #000;
+  font-size: 18px;
+  position: relative;
+  /* &::before {
+      display: none;
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 2px;
+      bottom: -2px;
+      background-color: $primary;
+  } */
+}
+.card .card-title a:hover {
+  text-decoration: none;
+  color: #FFB800;
+  /* &::before {
+      display: block;
+  } */
+}
+.card .card-text {
+  font-family: "Merriweather", serif;
+  font-size: 13px;
+  line-height: 165%;
+}
+.card .card-link-course a {
+  position: relative;
+  padding-left: 30px;
+  font-size: 12px;
+  color: #000;
+}
+.card .card-link-course a i {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.card .card-link-course a::before {
+  display: none;
+  content: "";
+  position: absolute;
+  left: 30px;
+  right: 0;
+  height: 2px;
+  bottom: -2px;
+  background-color: #FFB800;
+}
+.card .card-link-course a:hover {
+  text-decoration: none;
+}
+.card .card-link-course a:hover i {
+  color: #FFB800;
+}
+.card .card-link-course a:hover::before {
+  display: block;
 }
 
 /*# sourceMappingURL=cursos.css.map */

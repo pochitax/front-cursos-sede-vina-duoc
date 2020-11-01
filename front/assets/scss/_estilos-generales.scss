@@ -11,6 +11,15 @@
     font-family: 'Merriweather', serif;
 }
 
+/* Equal height */
+
+.row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
 /* Custom */
 
 .header-top {
@@ -40,5 +49,68 @@
 .call-to-action {
     .btn {
         padding: 30px 20px;
+    }
+}
+.card {
+    .card-title {
+        a {
+            color: $black;
+            font-size: 18px;
+            position: relative;
+            /* &::before {
+                display: none;
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                height: 2px;
+                bottom: -2px;
+                background-color: $primary;
+            } */
+            &:hover {
+                text-decoration: none;
+                color: $primary;
+                /* &::before {
+                    display: block;
+                } */
+            }
+        }
+    }
+    .card-text {
+        font-family: $font-family-monospace;
+        font-size: 13px;
+        line-height: 165%;
+    }
+    .card-link-course {
+        a {
+            position: relative;
+            padding-left: 30px;
+            font-size: 12px;
+            color: $black;
+            i {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            &::before {
+                display: none;
+                content: '';
+                position: absolute;
+                left: 30px;
+                right: 0;
+                height: 2px;
+                bottom: -2px;
+                background-color: $primary;
+            }
+            &:hover {
+                text-decoration: none;
+                i {
+                    color: $primary;
+                }
+                &::before {
+                    display: block;
+                }
+            }
+        }
     }
 }
