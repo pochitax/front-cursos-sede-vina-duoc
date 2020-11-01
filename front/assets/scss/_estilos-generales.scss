@@ -1,8 +1,11 @@
 
 /* Generales */ 
 
-.h3 {
+.h3, h3 {
     font-size: 22px;
+}
+.h4, h4 {
+    font-size: 18px;
 }
 .display-4 {
     font-size: 42px;
@@ -12,6 +15,21 @@
 }
 .bg-gray {
     background-color: #EFEFEF;
+}
+.bg-negocios {
+    background-color: $color-negocios;
+}
+.bg-diseno {
+    background-color: $color-diseno;
+}
+.bg-informatica {
+    background-color: $color-informatica;
+}
+.bg-comunicaciones {
+    background-color: $color-comunicaciones;
+}
+.bg-salud {
+    background-color: $color-salud;
 }
 
 /* Equal height */

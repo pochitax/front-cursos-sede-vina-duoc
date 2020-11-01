@@ -9909,6 +9909,26 @@ h3 {
   background-color: #EFEFEF;
 }
 
+.bg-negocios {
+  background-color: #9521B2;
+}
+
+.bg-diseno {
+  background-color: #C1D541;
+}
+
+.bg-informatica {
+  background-color: #939393;
+}
+
+.bg-comunicaciones {
+  background-color: #BF0249;
+}
+
+.bg-salud {
+  background-color: #37A7C6;
+}
+
 /* Equal height */
 .row-eq-height {
   display: -webkit-box;
