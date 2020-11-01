@@ -9998,5 +9998,8 @@ h3 {
 .card .card-link-course a:hover::before {
   display: block;
 }
+.card .card-body.bg-dark .card-title a {
+  color: #FFB800;
+}
 
 /*# sourceMappingURL=cursos.css.map */

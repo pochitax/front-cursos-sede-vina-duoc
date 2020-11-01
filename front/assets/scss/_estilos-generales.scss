@@ -113,4 +113,13 @@
             }
         }
     }
+    .card-body {
+        &.bg-dark {
+            .card-title {
+                a {
+                    color: $primary;
+                }
+            }
+        }
+    }
 }
