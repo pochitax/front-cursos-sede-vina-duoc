@@ -1,7 +1,8 @@
 $( document ).ready(function() {
     
-    // Add class to header menu
+    // Menu fixed duoc admision
 
+    /*  
     $(window).scroll(function() {    
         var scroll = $(window).scrollTop(),
         
@@ -24,13 +25,13 @@ $( document ).ready(function() {
         } else {
             $(".header-top").removeClass("d-block");
         } 
-    });
+    }); */
 
     // pinBox
 
     $(".pinBox").pinBox({
 		//default 0px
-		Top : '100px',
+		Top : '0', // 100px al agregar el menu fixed
 		//default '.container' 
 		Container : '#coursesSedeVina',
 		//default 20 
