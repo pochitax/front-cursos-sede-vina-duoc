@@ -84,49 +84,170 @@
         font-size: 13px;
         line-height: 165%;
     }
-    .card-link-course {
-        a {
-            position: relative;
-            padding-left: 20px;
-            font-size: 12px;
-            color: $black;
-            i {
-                position: absolute;
-                left: 0;
-                top: 0;
-            }
-            &::before {
-                display: none;
-                content: '';
-                position: absolute;
-                left: 20px;
-                right: 0;
-                height: 2px;
-                bottom: -2px;
-                background-color: $primary;
-            }
-            &:hover {
-                text-decoration: none;
-                i {
-                    color: $primary;
-                }
-                &::before {
-                    display: block;
-                }
-            }
-            &.pl-0 {
-                &::before {
-                    left: 0;
-                }
-            }
-        }
-    }
     .card-body {
         &.bg-dark {
             .card-title {
                 a {
                     color: $primary;
                 }
+            }
+        }
+    }
+}
+.card-link-course {
+    a {
+        position: relative;
+        padding-left: 20px;
+        font-size: 12px;
+        color: $black;
+        i {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        span {
+
+        }
+        &:hover {
+            text-decoration: none;
+            i {
+                color: $primary;
+            }
+            span {
+                border-bottom: 2px solid $primary;
+            }
+        }
+        &.pl-0 {
+            &::before {
+                left: 0;
+            }
+        }
+    }
+}
+#business {
+    .card-title {
+        a {
+            &:hover {
+                color: $color-negocios;
+            }
+        }
+    }
+    .card-link-course {
+        a {
+            &:hover {
+                i {
+                    color: $color-negocios;
+                }
+                span {
+                    border-bottom: 2px solid $color-negocios;
+                }
+            }
+        }
+    }
+}
+#comunication {
+    .card-title {
+        a {
+            &:hover {
+                color: $color-comunicaciones;
+            }
+        }
+    }
+    .card-link-course {
+        a {
+            &:hover {
+                i {
+                    color: $color-comunicaciones;
+                }
+                span {
+                    border-bottom: 2px solid $color-comunicaciones;
+                }
+            }
+        }
+    }
+}
+#design {
+    .card-title {
+        a {
+            &:hover {
+                color: $color-diseno;
+            }
+        }
+    }
+    .card-link-course {
+        a {
+            &:hover {
+                i {
+                    color: $color-diseno;
+                }
+                span {
+                    border-bottom: 2px solid $color-diseno;
+                }
+            }
+        }
+    }
+}
+#it-course {
+    .card-title {
+        a {
+            &:hover {
+                color: $color-informatica;
+            }
+        }
+    }
+    .card-link-course {
+        a {
+            &:hover {
+                i {
+                    color: $color-informatica;
+                }
+                span {
+                    border-bottom: 2px solid $color-informatica;
+                }
+            }
+        }
+    }
+}
+#health {
+    .card-title {
+        a {
+            &:hover {
+                color: $color-salud;
+            }
+        }
+    }
+    .card-link-course {
+        a {
+            &:hover {
+                i {
+                    color: $color-salud;
+                }
+                span {
+                    border-bottom: 2px solid $color-salud;
+                }
+            }
+        }
+    }
+}
+.tabs-courses {
+    .nav-link {
+        color: $white;
+        padding: 1rem 1.5rem;
+        &.active {
+            &.business-course {
+                background-color: $color-negocios;
+            }
+            &.comunication-course {
+                background-color: $color-comunicaciones;
+            }
+            &.design-course {
+                background-color: $color-diseno;
+            }
+            &.it-course {
+                background-color: $color-informatica;
+            }
+            &.health-course {
+                background-color: $color-salud;
             }
         }
     }

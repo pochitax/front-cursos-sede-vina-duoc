@@ -35,14 +35,15 @@ $grays: map-merge(
 
 $blue:    #007bff !default;
 $indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
-$pink:    #e83e8c !default;
+$purple:  #9521B2 !default;
+$pink:    #BF0249 !default;
 $red:     #dc3545 !default;
 $orange:  #fd7e14 !default;
 $yellow:  #FFB800 !default;
-$green:   #28a745 !default;
+$green:   #C1D541 !default;
 $teal:    #20c997 !default;
-$cyan:    #17a2b8 !default;
+$cyan:    #37A7C6 !default;
+$gray-medium: #939393 !default;
 
 $colors: () !default;
 $colors: map-merge(
@@ -72,6 +73,14 @@ $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $black !default;
+
+// escuelas
+
+$color-negocios: $purple !default;
+$color-diseno: $green !default;
+$color-comunicaciones: $pink !default;
+$color-informatica: $gray-medium !default;
+$color-salud: $cyan !default;
 
 $theme-colors: () !default;
 $theme-colors: map-merge(
