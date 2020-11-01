@@ -10132,8 +10132,57 @@ h3 {
 
 /* Responsive */
 /* ipad */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .h3, h3 {
+    font-size: 18px;
+  }
+
+  .h4, h4 {
+    font-size: 15px;
+  }
+
+  .display-4 {
+    font-size: 27px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .header-top {
+    height: 60px;
+  }
+  .header-top .row {
+    height: 60px;
+  }
+  .header-top .col-md-6 {
+    height: 60px;
+  }
+
+  .header-logo img {
+    width: 160px;
+  }
+
+  .featured-top .font-italic {
+    font-size: 18px;
+  }
+
+  .featured-top .btn {
+    padding: 15px;
+  }
+
+  .tabs-courses .nav-link {
+    color: #fff;
+    padding: 0.5rem 0.65rem;
+    font-size: 13px;
+  }
+
+  #carouselSlides {
+    margin-bottom: -20px;
+  }
+}
 /* móvil */
-@media (max-width: 767px) {
+@media (max-width: 767.98px) {
   .h3, h3 {
     font-size: 18px;
   }
