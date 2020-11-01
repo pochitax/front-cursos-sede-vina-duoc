@@ -43,9 +43,25 @@
 
 /* Custom */
 
+.header {
+    padding-top: 100px;
+}
+/* .header.bg-dark.top {
+    .header-top.fixed-top {
+        display: block !important;
+        //transition: all 1s ease;
+    }
+} */
+#btn-top {
+    display: none; 
+    height: 100px;
+}
 .header-top {
     height: 100px;
     .row {
+        height: 100px;
+    }
+    .col-md-6 {
         height: 100px;
     }
 }
