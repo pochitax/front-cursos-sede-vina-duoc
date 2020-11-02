@@ -37,7 +37,7 @@ $( document ).ready(function() {
 		//default 20 
 		ZIndex : 200,
 		//default '767px' if you disable pinBox in mobile or tablet
-		MinWidth : '767px'
+		MinWidth : 0, //'767px'
 		//events if scrolled or window resized 
     });
     
@@ -86,6 +86,12 @@ $( document ).ready(function() {
 
     $('#drop-health').click(function(){
         $('#myTabResponsive').css({'background-color':'#37A7C6', 'border-color': '#37A7C6'});
+    });
+
+    $('.drop').on('click', function (e) {
+        var href = $(this).attr('href');
+        $('html, body').animate({scrollTop:$('#coursesSedeVina').position().top}, 'slow');
+        e.preventDefault();
     });
 
 });
