@@ -60,7 +60,8 @@ $( document ).ready(function() {
         $(this).parent().removeClass("active");
         var content = $(this).text();
         $(".dropdown-toggle").text(content+" ");
-        $(".dropdown-toggle").append("<span class='caret'></span>")
+        $(".dropdown-toggle").append("<span class='caret'></span>");
+        $(".dropdown-item").removeClass("active");
     });
      
 });

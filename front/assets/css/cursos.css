@@ -10198,6 +10198,10 @@ h3 {
 }
 /* móvil */
 @media (max-width: 767.98px) {
+  h2, .h2 {
+    font-size: 24px;
+  }
+
   .h3, h3 {
     font-size: 18px;
   }
