@@ -9986,6 +9986,12 @@ h3 {
 .call-to-action .btn {
   padding: 30px 20px;
 }
+.call-to-action h3 {
+  font-size: 30px;
+}
+.call-to-action p {
+  font-size: 1.2rem;
+}
 
 .card .card-title a {
   color: #000;
@@ -10222,6 +10228,14 @@ h3 {
   .call-to-action .btn {
     padding: 15px;
   }
+
+  .call-to-action h3 {
+    font-size: 27px;
+  }
+
+  .call-to-action p {
+    font-size: 1rem;
+  }
 }
 /* móvil */
 @media (max-width: 767.98px) {
@@ -10277,8 +10291,20 @@ h3 {
     line-height: 150%;
   }
 
+  .call-to-action {
+    text-align: center;
+  }
+
   .call-to-action .btn {
     padding: 15px;
+  }
+
+  .call-to-action h3 {
+    font-size: 30px;
+  }
+
+  .call-to-action p {
+    font-size: 1rem;
   }
 
   .footer .logo-footer {
