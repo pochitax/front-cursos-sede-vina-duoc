@@ -63,5 +63,29 @@ $( document ).ready(function() {
         $(".dropdown-toggle").append("<span class='caret'></span>");
         $(".dropdown-item").removeClass("active");
     });
-     
+    
+    $('#drop-all-courses').click(function(){
+        $('#myTabResponsive').css({'background-color':'#FFB800', 'border-color': '#FFB800'});
+    });
+
+    $('#drop-business').click(function(){
+        $('#myTabResponsive').css({'background-color':'#9521B2', 'border-color': '#9521B2'});
+    });
+
+    $('#drop-comunication').click(function(){
+        $('#myTabResponsive').css({'background-color':'#BF0249', 'border-color': '#BF0249'});
+    });
+
+    $('#drop-design').click(function(){
+        $('#myTabResponsive').css({'background-color':'#C1D541', 'border-color': '#C1D541'});
+    });
+
+    $('#drop-it-course').click(function(){
+        $('#myTabResponsive').css({'background-color':'#939393', 'border-color': '#939393'});
+    });
+
+    $('#drop-health').click(function(){
+        $('#myTabResponsive').css({'background-color':'#37A7C6', 'border-color': '#37A7C6'});
+    });
+
 });

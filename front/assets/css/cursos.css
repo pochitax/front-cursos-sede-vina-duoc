@@ -10130,6 +10130,25 @@ h3 {
   color: #FFB800;
 }
 
+.dropdown-item.active#drop-all-courses {
+  background-color: #FFB800;
+}
+.dropdown-item.active#drop-business {
+  background-color: #9521B2;
+}
+.dropdown-item.active#drop-comunication {
+  background-color: #BF0249;
+}
+.dropdown-item.active#drop-design {
+  background-color: #C1D541;
+}
+.dropdown-item.active#drop-it-course {
+  background-color: #939393;
+}
+.dropdown-item.active#drop-health {
+  background-color: #37A7C6;
+}
+
 /* Responsive */
 /* desktop */
 @media (min-width: 992px) and (max-width: 1199.98px) {

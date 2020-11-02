@@ -308,6 +308,29 @@
         }
     }
 }
+.dropdown-item {
+    &.active {
+        &#drop-all-courses {
+            background-color: $primary;
+        }
+        &#drop-business {
+            background-color: $color-negocios;
+        }
+        &#drop-comunication {
+            background-color: $color-comunicaciones;
+        }
+        &#drop-design {
+            background-color: $color-diseno;
+        }
+        &#drop-it-course {
+            background-color: $color-informatica;
+        }
+        &#drop-health {
+            background-color: $color-salud;
+        }
+    }
+}
+
 /* Responsive */
 
 /* desktop */
