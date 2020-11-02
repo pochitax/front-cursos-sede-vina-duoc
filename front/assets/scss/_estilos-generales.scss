@@ -137,6 +137,19 @@
         }
     }
 }
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+    .breadcrumb-item {
+        font-size: 13px;
+        a {
+            color: #999;
+        }
+        &.active {
+            color: #333;
+        }
+    }
+}
 .card-link-course {
     a {
         position: relative;
