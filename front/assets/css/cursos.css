@@ -10244,6 +10244,10 @@ h3 {
   .footer p, .footer .h5, .footer h5, .footer .nav-link {
     font-size: 12px;
   }
+
+  .bg-negocios .btn, .bg-diseno .btn, .bg-informatica .btn, .bg-comunicaciones .btn, .bg-salud .btn {
+    font-size: 12px;
+  }
 }
 /* móvil */
 @media (max-width: 767.98px) {
