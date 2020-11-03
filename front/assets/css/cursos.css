@@ -10285,6 +10285,10 @@ h3 {
 }
 /* móvil */
 @media (max-width: 767.98px) {
+  h1, .h1 {
+    font-size: 2rem;
+  }
+
   h2, .h2 {
     font-size: 24px;
   }
@@ -10328,7 +10332,11 @@ h3 {
   }
 
   .header-logo img {
-    width: 160px;
+    width: 150px;
+  }
+
+  .breadcrumb .breadcrumb-item {
+    font-size: 11px;
   }
 
   #carouselSlides {

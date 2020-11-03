@@ -455,6 +455,9 @@
 /* móvil */
 
 @media (max-width: 767.98px) { 
+    h1, .h1 {
+        font-size: 2rem;
+    }
     h2, .h2 {
         font-size: 24px;
     }
@@ -490,7 +493,10 @@
         }
     }
     .header-logo img {
-        width: 160px;
+        width: 150px;
+    }
+    .breadcrumb .breadcrumb-item {
+        font-size: 11px;
     }
     #carouselSlides {
         margin-bottom: 0;
