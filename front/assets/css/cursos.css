@@ -10183,6 +10183,12 @@ h3 {
   font-family: "Merriweather", serif;
 }
 
+.course-info .course-info-description {
+  font-family: "Merriweather", serif;
+  font-size: 15px;
+  line-height: 165%;
+}
+
 /* Responsive */
 /* desktop */
 @media (min-width: 992px) and (max-width: 1199.98px) {
@@ -10309,13 +10315,16 @@ h3 {
 
   /* header */
   .header-top {
-    height: 50px;
+    height: 60px;
   }
   .header-top .row {
-    height: 50px;
+    height: 60px;
   }
   .header-top .col-md-6 {
-    height: 50px;
+    height: 60px;
+  }
+  .header-top .btn {
+    font-size: 14px;
   }
 
   .header-logo img {

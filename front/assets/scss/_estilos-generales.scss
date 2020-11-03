@@ -361,6 +361,13 @@
         font-family: $font-family-monospace;
     }
 }
+.course-info {
+    .course-info-description {
+        font-family: $font-family-monospace;
+        font-size: 15px;
+        line-height: 165%;
+    }
+}
 
 /* Responsive */
 
@@ -471,12 +478,15 @@
     }
     /* header */
     .header-top {
-        height: 50px;
+        height: 60px;
         .row {
-            height: 50px;
+            height: 60px;
         }
         .col-md-6 {
-            height: 50px;
+            height: 60px;
+        }
+        .btn {
+            font-size: 14px;
         }
     }
     .header-logo img {
