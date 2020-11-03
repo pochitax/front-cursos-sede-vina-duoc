@@ -380,6 +380,17 @@
         }
     }
 }
+.content-course {
+    p, li, h5 {
+        font-family: $font-family-monospace;
+        font-size: 13px;
+        line-height: 165%;
+    }
+    h5 {
+        font-family: $font-family-sans-serif;
+        font-size: 15px;
+    }
+}
 
 /* Responsive */
 

@@ -10199,6 +10199,16 @@ h3 {
   border-bottom: 2px solid #FFB800;
 }
 
+.content-course p, .content-course li, .content-course h5 {
+  font-family: "Merriweather", serif;
+  font-size: 13px;
+  line-height: 165%;
+}
+.content-course h5 {
+  font-family: Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 15px;
+}
+
 /* Responsive */
 /* desktop */
 @media (min-width: 992px) and (max-width: 1199.98px) {
