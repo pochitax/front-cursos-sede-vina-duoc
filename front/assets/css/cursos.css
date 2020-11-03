@@ -10188,6 +10188,16 @@ h3 {
   font-size: 15px;
   line-height: 165%;
 }
+.course-info .list-unstyled a {
+  color: #000;
+  position: relative;
+}
+.course-info .list-unstyled a:hover {
+  text-decoration: none;
+}
+.course-info .list-unstyled a:hover span {
+  border-bottom: 2px solid #FFB800;
+}
 
 /* Responsive */
 /* desktop */

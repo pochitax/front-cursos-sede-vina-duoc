@@ -367,6 +367,18 @@
         font-size: 15px;
         line-height: 165%;
     }
+    .list-unstyled {
+        a {
+            color: $black;
+            position: relative;
+            &:hover {
+                text-decoration: none;
+                span {
+                    border-bottom: 2px solid $primary;
+                }
+            }
+        }
+    }
 }
 
 /* Responsive */
