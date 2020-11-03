@@ -9909,6 +9909,11 @@ h3 {
   font-family: "Merriweather", serif;
 }
 
+.font-serif {
+  font-family: "Merriweather", serif;
+  font-size: 14px;
+}
+
 .bg-gray {
   background-color: #EFEFEF;
 }

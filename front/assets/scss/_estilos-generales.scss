@@ -11,7 +11,11 @@
     font-size: 42px;
 }
 .font-italic {
-    font-family: 'Merriweather', serif;
+    font-family:  $font-family-monospace;
+}
+.font-serif {
+    font-family: $font-family-monospace;
+    font-size: 14px;
 }
 .bg-gray {
     background-color: #EFEFEF;
