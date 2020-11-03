@@ -10169,6 +10169,15 @@ h3 {
   background-color: #37A7C6;
 }
 
+.form-control {
+  border: 1px solid #ced4da;
+  font-family: "Merriweather", serif;
+  font-size: 0.85rem;
+}
+.form-control::placeholder {
+  font-family: "Merriweather", serif;
+}
+
 /* Responsive */
 /* desktop */
 @media (min-width: 992px) and (max-width: 1199.98px) {

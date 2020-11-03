@@ -349,6 +349,14 @@
         }
     }
 }
+.form-control {
+    border: 1px solid #ced4da;
+    font-family: $font-family-monospace;
+    font-size: .85rem;
+    &::placeholder {
+        font-family: $font-family-monospace;
+    }
+}
 
 /* Responsive */
 
