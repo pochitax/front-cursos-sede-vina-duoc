@@ -10208,7 +10208,9 @@ h3 {
   font-family: Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 15px;
 }
-
+.content-course li {
+  position: relative;
+}
 /* Responsive */
 /* desktop */
 @media (min-width: 992px) and (max-width: 1199.98px) {

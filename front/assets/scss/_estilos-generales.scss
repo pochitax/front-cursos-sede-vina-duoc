@@ -390,6 +390,12 @@
         font-family: $font-family-sans-serif;
         font-size: 15px;
     }
+    li {
+        position: relative;
+        &::before {
+            
+        }
+    }
 }
 
 /* Responsive */
