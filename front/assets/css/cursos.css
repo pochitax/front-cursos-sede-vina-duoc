@@ -10208,9 +10208,22 @@ h3 {
   font-family: Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 15px;
 }
+.content-course ul {
+  list-style-type: none;
+  padding-left: 1.5rem;
+}
 .content-course li {
   position: relative;
+  margin-bottom: 1rem;
 }
+.content-course li::before {
+  position: absolute;
+  content: "▸";
+  font-size: 14px;
+  color: #FFB800;
+  left: -1rem;
+}
+
 /* Responsive */
 /* desktop */
 @media (min-width: 992px) and (max-width: 1199.98px) {
@@ -10224,6 +10237,10 @@ h3 {
 }
 /* ipad */
 @media (min-width: 768px) and (max-width: 991.98px) {
+  h1, .h1 {
+    font-size: 2rem;
+  }
+
   h2, .h2 {
     font-size: 1.5rem;
   }

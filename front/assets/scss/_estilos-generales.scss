@@ -390,10 +390,20 @@
         font-family: $font-family-sans-serif;
         font-size: 15px;
     }
+    ul {
+        list-style-type: none;
+        padding-left: 1.5rem;
+    }
     li {
         position: relative;
+        margin-bottom: 1rem;
         &::before {
-            
+            position: absolute;
+            //font-family: 'Font Awesome 5 Free';
+            content: '\25B8';
+            font-size: 14px;
+            color: $primary;
+            left: -1rem;
         }
     }
 }
@@ -414,6 +424,9 @@
 /* ipad */
 
 @media (min-width: 768px) and (max-width:991.98px) {
+    h1, .h1 {
+        font-size: 2rem;
+    }
     h2, .h2 {
         font-size: 1.5rem;
     }
