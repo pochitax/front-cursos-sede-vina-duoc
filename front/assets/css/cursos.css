@@ -9914,6 +9914,22 @@ h3 {
   font-size: 14px;
 }
 
+ul.font-serif {
+  padding-left: 20px;
+  list-style-type: none;
+}
+ul.font-serif li {
+  position: relative;
+  margin-bottom: 5px;
+}
+ul.font-serif li::before {
+  position: absolute;
+  content: "▸";
+  font-size: 14px;
+  color: #000;
+  left: -20px;
+}
+
 .bg-gray {
   background-color: #EFEFEF;
 }

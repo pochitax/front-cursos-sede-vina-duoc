@@ -17,6 +17,22 @@
     font-family: $font-family-monospace;
     font-size: 14px;
 }
+ul.font-serif {
+    padding-left: 20px;
+    list-style-type: none;
+    li {
+    position: relative;
+    margin-bottom: 5px; //15px;
+        &::before {
+            position: absolute;
+            //font-family: 'Font Awesome 5 Free';
+            content: '\25B8';
+            font-size: 14px;
+            color: $black;
+            left: -20px;
+        }
+    }
+}
 .bg-gray {
     background-color: #EFEFEF;
 }
