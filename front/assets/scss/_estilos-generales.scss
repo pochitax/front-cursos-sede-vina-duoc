@@ -200,7 +200,10 @@ ul.font-serif {
         }
     }
 }
-#business {
+
+/* escuelas color body */
+
+#business, .escuela-negocios {
     .card-title {
         a {
             &:hover {
@@ -221,7 +224,7 @@ ul.font-serif {
         }
     }
 }
-#comunication {
+#comunication, .escuela-comunicacion {
     .card-title {
         a {
             &:hover {
@@ -242,7 +245,7 @@ ul.font-serif {
         }
     }
 }
-#design {
+#design, .escuela-diseno {
     .card-title {
         a {
             &:hover {
@@ -263,7 +266,7 @@ ul.font-serif {
         }
     }
 }
-#it-course {
+#it-course, .escuela-informatica {
     .card-title {
         a {
             &:hover {
@@ -284,7 +287,7 @@ ul.font-serif {
         }
     }
 }
-#health {
+#health, .escuela-salud  {
     .card-title {
         a {
             &:hover {
@@ -422,23 +425,6 @@ ul.font-serif {
             left: -1rem;
         }
     }
-}
-/* escuelas color body */
-
-.escuela-diseno {
-
-}
-.escuela-negocios {
-
-}
-.escuela-salud {
-
-}
-.escuela-informatica {
-
-}
-.escuela-comunicacion {
-
 }
 
 /* Responsive */

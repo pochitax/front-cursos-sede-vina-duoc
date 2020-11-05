@@ -10083,53 +10083,54 @@ ul.font-serif li::before {
   left: 0;
 }
 
-#business .card-title a:hover {
+/* escuelas color body */
+#business .card-title a:hover, .escuela-negocios .card-title a:hover {
   color: #9521B2;
 }
-#business .card-link-course a:hover i {
+#business .card-link-course a:hover i, .escuela-negocios .card-link-course a:hover i {
   color: #9521B2;
 }
-#business .card-link-course a:hover span {
+#business .card-link-course a:hover span, .escuela-negocios .card-link-course a:hover span {
   border-bottom: 2px solid #9521B2;
 }
 
-#comunication .card-title a:hover {
+#comunication .card-title a:hover, .escuela-comunicacion .card-title a:hover {
   color: #BF0249;
 }
-#comunication .card-link-course a:hover i {
+#comunication .card-link-course a:hover i, .escuela-comunicacion .card-link-course a:hover i {
   color: #BF0249;
 }
-#comunication .card-link-course a:hover span {
+#comunication .card-link-course a:hover span, .escuela-comunicacion .card-link-course a:hover span {
   border-bottom: 2px solid #BF0249;
 }
 
-#design .card-title a:hover {
+#design .card-title a:hover, .escuela-diseno .card-title a:hover {
   color: #C1D541;
 }
-#design .card-link-course a:hover i {
+#design .card-link-course a:hover i, .escuela-diseno .card-link-course a:hover i {
   color: #C1D541;
 }
-#design .card-link-course a:hover span {
+#design .card-link-course a:hover span, .escuela-diseno .card-link-course a:hover span {
   border-bottom: 2px solid #C1D541;
 }
 
-#it-course .card-title a:hover {
+#it-course .card-title a:hover, .escuela-informatica .card-title a:hover {
   color: #939393;
 }
-#it-course .card-link-course a:hover i {
+#it-course .card-link-course a:hover i, .escuela-informatica .card-link-course a:hover i {
   color: #939393;
 }
-#it-course .card-link-course a:hover span {
+#it-course .card-link-course a:hover span, .escuela-informatica .card-link-course a:hover span {
   border-bottom: 2px solid #939393;
 }
 
-#health .card-title a:hover {
+#health .card-title a:hover, .escuela-salud .card-title a:hover {
   color: #37A7C6;
 }
-#health .card-link-course a:hover i {
+#health .card-link-course a:hover i, .escuela-salud .card-link-course a:hover i {
   color: #37A7C6;
 }
-#health .card-link-course a:hover span {
+#health .card-link-course a:hover span, .escuela-salud .card-link-course a:hover span {
   border-bottom: 2px solid #37A7C6;
 }
 
@@ -10240,7 +10241,6 @@ ul.font-serif li::before {
   left: -1rem;
 }
 
-/* escuelas color body */
 /* Responsive */
 /* desktop */
 @media (min-width: 992px) and (max-width: 1199.98px) {
