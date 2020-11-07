@@ -512,6 +512,35 @@ ul.font-serif {
        }
     }
 }
+/* validaciones formulario */
+
+.form-group {
+    position: relative;
+    &.has-error {
+        .form-control {
+            border-color: $red;
+        }
+    }
+    &.has-success {
+        .form-control {
+            border-color: $green;
+        }
+    }
+    .rut-validate {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+}
+.error {
+    position: absolute;
+    bottom: -5px;
+    font-size: 12px;
+    color: $red;
+    font-style: italic;
+    width: 100%;
+    background-color: #EFEFEF;
+}
 
 /* móvil */
 

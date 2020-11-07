@@ -1,3 +1,11 @@
+// alerta de validación
+
+$.validator.setDefaults( {
+    submitHandler: function () {
+        form.submit();
+    }
+} );
+
 $( document ).ready(function() {
     
     // Menu fixed duoc admision
@@ -92,6 +100,72 @@ $( document ).ready(function() {
         var href = $(this).attr('href');
         $('html, body').animate({scrollTop:$('#coursesSedeVina').position().top}, 'slow');
         e.preventDefault();
+    });
+
+    // ejercicio de validar campos
+
+    jQuery.validator.addMethod("phonenu", function (value, element) {
+        if ( /^\d{3}-?\d{3}-?\d{4}$/g.test(value)) {
+            return true;
+        } else {
+            return false;
+        };
+    }, "Invalid phone number");
+
+    $( "#signupForm" ).validate( {
+        rules: {
+            firstname: "required",  // requerido
+            lastname1: "required",   // requerido
+            lastname2: "required",   // requerido
+            email: {
+                required: true,
+                email: true
+            },
+            rut: "required",
+            phone: {
+                phonenu: true,
+                required: true
+            },
+        },
+        messages: {
+            firstname: "Por favor ingresa tu nombre",
+            lastname1: "Por favor ingresa tu apellido paterno",
+            lastname2: "Por favor ingresa tu apellido materno",
+            email: "Por favor ingresa un correo válido",
+            rut: "Ingresa un rut válido por favor",
+            phone: "Por favor ingresa un número de teléfono válido",
+        },
+        errorElement: "span",
+        errorPlacement: function ( error, element ) {
+            // Add the `help-block` class to the error element
+            error.addClass( "help-block" );
+            if ( element.prop( "type" ) === "checkbox" ) {
+                error.insertAfter( element.parent( "label" ) );
+            } else {
+                error.insertAfter( element );
+            }
+        },
+        highlight: function ( element, errorClass, validClass ) {
+            $( element ).parents( ".form-group" ).addClass( "has-error" ).removeClass( "has-success" );
+        },
+        unhighlight: function (element, errorClass, validClass) {
+            $( element ).parents( ".form-group" ).addClass( "has-success" ).removeClass( "has-error" );
+        }
+    } );
+
+    // rut
+
+    //$("#rut").rut();
+
+    $("#RutStudent").rut({formatOn: 'keyup', validateOn: 'keyup'
+        }).on('rutInvalido', function(){ 
+            $('.rut-validate').html('<span id="rut-error" class="error">Tu rut no es válido</span>');
+            $('.rut-validate').parents('.form-group').removeClass('has-success');
+            $('.rut-validate').parents('.form-group').addClass('has-error');
+        }).on('rutValido', function(){ 
+            $('.rut-validate').empty();
+            $('.rut-validate').parents('.form-group').removeClass('has-error');
+            $('.rut-validate').parents('.form-group').addClass('has-success');
     });
 
 });
