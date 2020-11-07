@@ -1,16 +1,4 @@
 <?php
-if( count(get_included_files()) == ((version_compare(PHP_VERSION, '5.0.0', '>='))?1:0) )
-{
-  echo "Direct access not allowed";
-    exit();
-}
-
-if (basename($_SERVER['PHP_SELF']) == basename(__FILE__)) {
-    die('Direct access not allowed');
-    exit();
-};
-
-
 include_once 'viveduoc.clases/Alumno.php';
 include_once 'viveduoc.clases/ConnexionViveDuoc.php';
 
@@ -35,7 +23,7 @@ class AlumnoServicio
         $comuna = $alumno->getComuna();
 
         ////////////// Insertar a la tabla la informacion generada /////////
-        $sql = "INSERT INTO avd_alumno(rut, nombres, apellido_paterno, apellido_materno, email, telefono, region, comuna) VALUES(:rut,:nombres,:apellido_paterno,:apellido_materno,:email,:telefono,:region,:comuna)";
+        $sql = "INSERT INTO avd_alumno(rut, nombres, apellido_paterno, apellido_materno, email, telefono, region, comuna, last_update) VALUES(:rut,:nombres,:apellido_paterno,:apellido_materno,:email,:telefono,:region,:comuna, now())";
         $sql = $this->db->connect()->prepare($sql);
 
         $sql->bindParam(':rut', $rut, PDO::PARAM_STR, 12);
@@ -59,7 +47,7 @@ class AlumnoServicio
         $sentencia->execute([$rut]);
         $elemento = $sentencia->fetch(PDO::FETCH_OBJ);
         if ($elemento === FALSE) {
-            echo ("No existe el alumno");
+            //echo ("No existe el alumno");
         } else {
             $alumno = new Alumno();
             $alumno->setRut($elemento->rut);

@@ -20,7 +20,7 @@ class RegionServicio
         $elemento = $sentencia->fetch(PDO::FETCH_OBJ);
         if ($elemento === FALSE) {
             #No existe
-            echo "¡No existe region con ese ID!";
+            //echo "¡No existe region con ese ID!";
             exit();
         } else {
             $region = new Region();

@@ -82,8 +82,8 @@ var z = document.getElementById("LastName2").required;
                     //$("#resultado").html("Espere por favor...");
             },
             success:  function (response) {
+                console.log(response);
                     var respuesta = JSON.parse(response);
-                        //console.log(response);
                     if(respuesta.success == true){
                         //$("#resultado").html("Inscripcion envíada.");
                         $('#ModalInscrispcion').modal('show');

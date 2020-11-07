@@ -10,7 +10,7 @@ include 'viveduoc.servicio/UsuarioServicio.php';
 
 
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+//use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 
 if (isset($_POST["uname"]) && isset($_POST["psw"]) && isset($_POST["request"])) {
@@ -104,7 +104,7 @@ if (isset($_POST["uname"]) && isset($_POST["psw"]) && isset($_POST["request"])) 
             }
 
             //Redimensionamiento de celdas
-            foreach (range('A', 'G') as $columnID) {
+            foreach (range('A', 'K') as $columnID) {
                 $spreadsheet->getActiveSheet()->getColumnDimension($columnID)
                     ->setAutoSize(true);
             }
@@ -130,6 +130,6 @@ if (isset($_POST["uname"]) && isset($_POST["psw"]) && isset($_POST["request"])) 
             die();
         }
     }else{
-        echo("Sin permisos");
+        //echo("Sin permisos");
     }
 }

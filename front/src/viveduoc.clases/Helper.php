@@ -66,7 +66,7 @@ class Helper
 
         //RUT
         if (substr_count($rut, ".") != 2 || substr_count($rut, "-") != 1 || strlen($rut) > 12 || strlen($rut) < 3 || Helper::validaRut($rut) == False) {
-            $validar['error']['msg'] = 'Formato de rut incorrecto';
+            $validar['error']['msg'] = 'Rut incorrecto';
             $validar['error']['estado'] = True;
             return $validar;
         }
@@ -80,13 +80,13 @@ class Helper
 
         //TELEFONO
         if (strlen($telefono) > 45) {
-            $validar['error']['msg'] = 'Curso inválido';
+            $validar['error']['msg'] = 'Telefono inválido';
             $validar['error']['estado'] = True;
             return $validar;
         }
 
         //CURSO
-        if (is_numeric($idCurso) == False) {
+        if (is_numeric($idCurso) == False || $idCurso < 0 || $idCurso > 22) {
             $validar['error']['msg'] = 'Curso inválido';
             $validar['error']['estado'] = True;
             return $validar;
