@@ -5,12 +5,21 @@ $(function(){
 
 });
 
+$('input').on('blur', function() {
+        if ($("#signupForm").valid()) {
+            $('#form-btn').prop('disabled', false);
+        } else {
+            $('#form-btn').prop('disabled', 'disabled');
+        }
+    });
+
 $("#form-btn").click(function() {
         if(($('#signupForm').validate().checkForm())){
+                console.log("Validación correcta");
                 envioFormulario();
         }
         else{
-                console.log('QUE HACES?');
+                console.log('Validación incorrecta');
         }
 });
 
@@ -70,13 +79,13 @@ var z = document.getElementById("LastName2").required;
             url:   '../src/EnvioFormulario.php',
             type:  'post',
             beforeSend: function () {
-                    $("#resultado").html("Espere por favor...");
+                    //$("#resultado").html("Espere por favor...");
             },
             success:  function (response) {
                     var respuesta = JSON.parse(response);
                         //console.log(response);
                     if(respuesta.success == true){
-                        $("#resultado").html("Inscripcion envíada.");
+                        //$("#resultado").html("Inscripcion envíada.");
                         $('#ModalInscrispcion').modal('show');
                         
                         if(respuesta.nombres != null){
@@ -85,7 +94,8 @@ var z = document.getElementById("LastName2").required;
                     }else{
                             console.log(response);
                         console.log(respuesta.errores.error.msg);
-                        $("#resultado").html("Hubo un error: "+respuesta.errores.error.msg); 
+                        $('#ModalError').modal('show');
+                        $("#TextoError").html(respuesta.errores.error.msg); 
                     }
             }
     });
