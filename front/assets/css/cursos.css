@@ -10338,6 +10338,32 @@ ul.font-serif li::before {
     font-size: 12px;
   }
 }
+/* validaciones formulario */
+.form-group {
+  position: relative;
+}
+.form-group.has-error .form-control {
+  border-color: #dc3545;
+}
+.form-group.has-success .form-control {
+  border-color: #C1D541;
+}
+.form-group .rut-validate {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.error {
+  position: absolute;
+  bottom: -5px;
+  font-size: 12px;
+  color: #dc3545;
+  font-style: italic;
+  width: 100%;
+  background-color: #EFEFEF;
+}
+
 /* móvil */
 @media (min-width: 576px) and (max-width: 767.98px) {
   .header-logo img {
