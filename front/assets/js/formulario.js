@@ -6,7 +6,12 @@ $(function(){
 });
 
 $("#form-btn").click(function() {
-        envioFormulario();
+        if(($('#signupForm').validate().checkForm())){
+                envioFormulario();
+        }
+        else{
+                console.log('QUE HACES?');
+        }
 });
 
 function cargarComunas(){
@@ -69,12 +74,18 @@ var z = document.getElementById("LastName2").required;
             },
             success:  function (response) {
                     var respuesta = JSON.parse(response);
-
+                        //console.log(response);
                     if(respuesta.success == true){
-                        $("#resultado").html("Inscripcion envíada."); 
+                        $("#resultado").html("Inscripcion envíada.");
+                        $('#ModalInscrispcion').modal('show');
+                        
+                        if(respuesta.nombres != null){
+                                $('#saludo_modal').html(respuesta.nombres);
+                        }
                     }else{
-                        console.log(respuesta.errores.msg);
-                        $("#resultado").html("Lo sentimos, hubo un error."); 
+                            console.log(response);
+                        console.log(respuesta.errores.error.msg);
+                        $("#resultado").html("Hubo un error: "+respuesta.errores.error.msg); 
                     }
             }
     });

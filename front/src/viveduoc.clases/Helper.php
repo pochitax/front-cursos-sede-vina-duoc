@@ -32,12 +32,12 @@ class Helper
         //NOMBRES
         if (strlen($nombres) > 0 && strlen($nombres) < 100) {
             if (!preg_match("/^[a-zA-Z\s,.'\-\pL]+$/u", $nombres)) {
-                $validar['error']['msg'] = 'Formato de nombre incorrecto';
+                $validar['error']['msg'] = 'Nombre incorrecto';
                 $validar['error']['estado'] = True;
                 return $validar;
             }
         } else {
-            $validar['error']['msg'] = 'Formato de nombre incorrecto';
+            $validar['error']['msg'] = 'Nombre incorrecto';
             $validar['error']['estado'] = True;
             return $validar;
         }
@@ -93,7 +93,7 @@ class Helper
         }
 
         //REGION
-        if (is_numeric($region) == True && ($region >= 1 && $region < 16)) {
+        if (is_numeric($region) == True && ($region >= 1 && $region <= 16)) {
         } else {
             $validar['error']['msg'] = 'Region inválida';
             $validar['error']['estado'] = True;

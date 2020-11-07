@@ -73,6 +73,7 @@ if (
 
         //$resultado = 'exito';
         $resultado['success'] = True;
+        $resultado['nombres'] = $nombres;
         exit(json_encode($resultado));
     }
 

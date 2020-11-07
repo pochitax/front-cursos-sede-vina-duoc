@@ -200,23 +200,24 @@
                             <select name="comuna" id="comuna" class="form-control mb-3">
                                 <option value="0">Selecciono la comuna</option>
                             </select>
+                            
                         </div>
                         <input type="hidden" id="CursoId" value="4"/>
                     </div>
                 </div>
-                <div class="col-md-12 d-flex justify-content-center">
-                    <button id="form-btn" type="button" class="btn btn-outline-dark rounded-pill py-3 px-4 py-lg-4 px-lg-5 mb-4" data-toggle="modal" data-target="#ModalInscrispcion"><i class="fas fa-lg fa-arrow-right mr-2 text-primary"></i>Quiero pre-inscribirme</button>
-                </div>
                 <div>
-                    <span id="resultado"></span>
+                    <span class="small text-danger" id="resultado"></span>
+                </div>
+                <div class="col-md-12 d-flex justify-content-center">
+                    <button id="form-btn" type="button" class="btn btn-outline-dark rounded-pill py-3 px-4 py-lg-4 px-lg-5 mb-4"><i class="fas fa-lg fa-arrow-right mr-2 text-primary"></i>Quiero pre-inscribirme</button>
                 </div>
             </form>
-            
             <div class="row pb-4">
                 <div class="col-lg-6 mx-auto text-center">
                     <p>Cada curso tiene un cupo limitado de <strong>15 participantes</strong>. <br>Preinscríbete y te confirmaremos al correo electrónico que nos <br class="d-none d-lg-inline-block">dejarás en este formulario.</p>
                 </div>
             </div>
+            
         </div>
     </section>
     <!-- "Te podría interesar" -->
@@ -417,7 +418,7 @@
                     </button>
                 </div>
                 <div class="modal-body px-5 pb-5 text-center">
-                    <h2 class="mb-4">¡Hola <span class="text-primary">Juanito</span>!</h2>
+                    <h2 id="saludo_modal" class="mb-4">¡Hola <span class="text-primary">Juanito</span>!</h2>
                     <p class="mb-4">
                         Hemos recibido tu preinscripción. En los próximos días recibirás en el correo que has registrado, las indicaciones correspondientes.
                     </p>
