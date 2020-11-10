@@ -24,7 +24,6 @@ $( document ).ready(function() {
             $("#btn-top").removeClass("d-flex");
         } 
     });
-
     $(window).scroll(function() {    
         var scrollT = $(window).scrollTop();
     
@@ -105,7 +104,7 @@ $( document ).ready(function() {
     // ejercicio de validar campos
 
     jQuery.validator.addMethod("phonenu", function (value, element) {
-        if ( /^\d{3}-?\d{3}-?\d{4}$/g.test(value)) {
+        if ( /^(\+?56)?(\s?)(0?9)(\s?)[9876543]\d{7}$/g.test(value)) {
             return true;
         } else {
             return false;
