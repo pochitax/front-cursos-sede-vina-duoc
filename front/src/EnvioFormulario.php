@@ -51,7 +51,11 @@ if (
         if ($alumnoBD == null) {
             $alumnoServicio->addAlumno($alumno);
         } else {
-            $alumno = $alumnoBD;
+            if (seActualizoUnCampo($alumnoBD, $alumno) == True) {
+                $alumnoServicio->updateAlumno($alumno);
+            } else {
+                $alumno = $alumnoBD;
+            }
         }
 
         //CURSOS
@@ -69,11 +73,25 @@ if (
 
         //INSCRIPCION
         $inscripcionServicio = new InscripcionServicio();
-        $inscripcionServicio->addInscripcion($alumno, $curso);
+        //BOOLEAN
+        $SeEncuentraInscrito = $inscripcionServicio->inscripcionRepetida($alumno->getRut(), $curso->getCodigo());
 
-        //$resultado = 'exito';
-        $resultado['success'] = True;
-        $resultado['nombres'] = $nombres;
+        if ($SeEncuentraInscrito == true) {
+            //Se encuentra inscrito
+            $errorInscripcionRepetida["error"]["estado"] = True;
+            $errorInscripcionRepetida["error"]["msg"] = ucwords($alumno->getNombres())." ya te has registrado a este curso.";
+            $resultado['success'] = False;
+            $resultado['errores'] = $errorInscripcionRepetida;
+
+            die(json_encode($resultado));
+        } else {
+            //Nueva Inscripcion
+            $inscripcionServicio->addInscripcion($alumno, $curso);
+            //$resultado = 'exito';
+            $resultado['success'] = True;
+            $resultado['nombres'] = ucwords($nombres);   
+        }
+
         exit(json_encode($resultado));
     }
 
@@ -92,4 +110,32 @@ if (
     $resultado['success'] = False;
     $resultado['errores'] = $resultadoValidaciones;
     die(json_encode($resultado));
+}
+
+function seActualizoUnCampo($alumnoBD, $alumno)
+{
+    //Compara strings ignorando mayusculas
+    if (strcasecmp($alumnoBD->getNombres(), $alumno->getNombres())) {
+        return true;
+    }
+    if (strcasecmp($alumnoBD->getApellidoPaterno(), $alumno->getApellidoPaterno())) {
+        return true;
+    }
+    if (strcasecmp($alumnoBD->getApellidoMaterno(), $alumno->getApellidoMaterno())) {
+        return true;
+    }
+    if (strcasecmp($alumnoBD->getEmail(), $alumno->getEmail())) {
+        return true;
+    }
+    if (strcasecmp($alumnoBD->getTelefono(), $alumno->getTelefono())) {
+        return true;
+    }
+    if ($alumnoBD->getRegion() != $alumno->getRegion()) {
+        return true;
+    }
+    if ($alumnoBD->getComuna() != $alumno->getComuna()) {
+        return true;
+    }
+
+    return false;
 }

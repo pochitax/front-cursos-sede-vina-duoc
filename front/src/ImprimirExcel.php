@@ -93,8 +93,8 @@ if (isset($_POST["uname"]) && isset($_POST["psw"]) && isset($_POST["request"])) 
                 $sheet->setCellValue('A' . $fila, $i + 1);
                 $sheet->setCellValue('B' . $fila,  $curso->getDescripcion());
                 $sheet->setCellValue('C' . $fila,  $inscripciones[$i]->getAlumnoRut());
-                $sheet->setCellValue('D' . $fila,  $alumno->getNombres());
-                $sheet->setCellValue('E' . $fila,  $alumno->getApellidoPaterno() . ' ' . $alumno->getApellidoMaterno());
+                $sheet->setCellValue('D' . $fila,  ucwords($alumno->getNombres()));
+                $sheet->setCellValue('E' . $fila,  ucwords($alumno->getApellidoPaterno()) . ' ' . ucwords($alumno->getApellidoMaterno()));
                 $sheet->setCellValue('F' . $fila,  $alumno->getEmail());
                 $sheet->setCellValue('G' . $fila,  $alumno->getTelefono());
                 $sheet->setCellValue('H' . $fila,  $region->getDescripcion());

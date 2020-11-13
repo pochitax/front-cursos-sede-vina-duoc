@@ -70,4 +70,18 @@ class InscripcionServicio
         }
         return $inscripciones;
     }
+
+    public function inscripcionRepetida($rut, $cursoCodigo)
+    {
+        $sql = "SELECT * FROM avd_inscripcion WHERE alumno_rut = ? AND curso_codigo = ?";
+        $result = $this->db->connect()->prepare($sql);
+        $result->execute([$rut, $cursoCodigo]);
+        //$result->execute();
+        $elementos = $result->fetchAll(PDO::FETCH_OBJ);
+        if(count($elementos) > 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
