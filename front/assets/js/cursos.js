@@ -101,6 +101,10 @@ $( document ).ready(function() {
         e.preventDefault();
     });
 
+    // inscripciones plazo 
+
+    $("#modalPlazo").modal('show');
+
     // ejercicio de validar campos
 
     jQuery.validator.addMethod("phonenu", function (value, element) {
@@ -166,5 +170,7 @@ $( document ).ready(function() {
             $('.rut-validate').parents('.form-group').removeClass('has-error');
             $('.rut-validate').parents('.form-group').addClass('has-success');
     });
+
+    
 
 });
