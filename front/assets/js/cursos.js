@@ -104,7 +104,7 @@ $( document ).ready(function() {
 
     // inscripciones plazo 
 
-    $("#modalPlazo").modal('show');
+    // $("#modalPlazo").modal('show');
 
     // ejercicio de validar campos
 
