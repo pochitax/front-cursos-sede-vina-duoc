@@ -35,6 +35,8 @@ $( document ).ready(function() {
         } 
     }); */
 
+    // Animación botón inscribe cursos
+
     var $root = $('html, body');
 
     $('#newInnscription').click(function() {
@@ -47,6 +49,14 @@ $( document ).ready(function() {
         });
 
         return false;
+    });
+
+    // Flechita amarilla
+
+    $('#newInscrCourse').hover(function() {
+        $('#iconArrow').animate( { paddingLeft: "30px" }); 
+    }, function() {
+        $('#iconArrow').animate( { paddingLeft: "0" }); 
     });
 
     // pinBox
