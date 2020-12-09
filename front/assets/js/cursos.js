@@ -34,30 +34,6 @@ $( document ).ready(function() {
         } 
     }); */
 
-    // Animación botón inscribe cursos
-
-    var $root = $('html, body');
-
-    $('#newInnscription').click(function() {
-        var href = $.attr(this, 'href');
-
-        $root.animate({
-            scrollTop: $(href).offset().top
-        }, 500, function () {
-            window.location.hash = href;
-        });
-
-        return false;
-    });
-
-    // Flechita amarilla
-
-    $('#newInscrCourse').hover(function() {
-        $('#iconArrow').animate( { paddingLeft: "30px" }); 
-    }, function() {
-        $('#iconArrow').animate( { paddingLeft: "0" }); 
-    });
-
     // pinBox
 
     $(".pinBox").pinBox({
@@ -127,7 +103,7 @@ $( document ).ready(function() {
 
     // inscripciones plazo 
 
-    // $("#modalPlazo").modal('show');
+    $("#modalPlazo").modal('show');
 
     // ejercicio de validar campos
 
