@@ -10,7 +10,7 @@ $resultadoValidaciones;
 
 if (
     isset($_POST["v_rut"]) && isset($_POST["v_nombre"]) && isset($_POST["v_lastname"]) && isset($_POST["v_lastname2"])
-    && isset($_POST["v_email"]) && isset($_POST["v_phone"]) && isset($_POST["v_region"]) && isset($_POST["v_comuna"]) && isset($_POST["v_curso"])
+    && isset($_POST["v_email"]) && isset($_POST["v_phone"]) && isset($_POST["v_region"]) && isset($_POST["v_comuna"]) && isset($_POST["v_curso"]) && isset($_POST["v_estadoacademico"])
 ) {
     $rut = $_POST["v_rut"];
     //Helper::validaRut($rut) ? 'Es válido' : 'Rut no válido :( ';
@@ -22,11 +22,12 @@ if (
     $region = $_POST["v_region"];
     $comuna = $_POST["v_comuna"];
     $idCurso = $_POST["v_curso"];
+    $estadoAcademico = $_POST["v_estadoacademico"];
 
     $comunaServicio = new ComunaServicio();
     $comunasCapturadas = $comunaServicio->getAllComunasPorRegion($region);
 
-    $resultadoValidaciones = HELPER::validarFormularioInscripcion($rut, $nombres, $apellidoPaterno, $apellidoMaterno, $email, $telefono, $region, $comuna, $idCurso);
+    $resultadoValidaciones = HELPER::validarFormularioInscripcion($rut, $nombres, $apellidoPaterno, $apellidoMaterno, $email, $telefono, $region, $comuna, $idCurso, $estadoAcademico);
 
     if ($resultadoValidaciones["error"]["estado"] == True) {
         $resultado['success'] = False;
@@ -43,6 +44,7 @@ if (
         $alumno->setTelefono($telefono);
         $alumno->setRegion($region);
         $alumno->setComuna($comuna);
+        $alumno->setEstadoAcademico($estadoAcademico);
 
         $alumnoServicio = new AlumnoServicio();
         //Busca alumno

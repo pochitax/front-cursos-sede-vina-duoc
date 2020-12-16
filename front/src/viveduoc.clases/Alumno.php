@@ -1,6 +1,7 @@
 <?php
 
-class Alumno {
+class Alumno
+{
     private $rut;
     private $nombres;
     private $apellido_paterno;
@@ -9,71 +10,115 @@ class Alumno {
     private $telefono;
     private $region;
     private $comuna;
+    private $estado_academico;
 
     //getters
-    function getRut(){
+    function getRut()
+    {
         return $this->rut;
     }
 
-    function getNombres(){
+    function getNombres()
+    {
         return $this->nombres;
     }
 
-    function getApellidoPaterno(){
+    function getApellidoPaterno()
+    {
         return $this->apellido_paterno;
     }
 
-    function getApellidoMaterno(){
+    function getApellidoMaterno()
+    {
         return $this->apellido_materno;
     }
 
-    function getEmail(){
+    function getEmail()
+    {
         return $this->email;
     }
 
-    function getTelefono(){
+    function getTelefono()
+    {
         return $this->telefono;
     }
 
-    function getRegion(){
+    function getRegion()
+    {
         return $this->region;
     }
 
-    function getComuna(){
+    function getComuna()
+    {
         return $this->comuna;
     }
 
-    
+    function getEstadoAcademico()
+    {
+        return $this->estado_academico;
+    }
+
+
     //setters
-    function setRut($rut){
+    function setRut($rut)
+    {
         $this->rut = $rut;
     }
 
-    function setNombres($nombres){
+    function setNombres($nombres)
+    {
         $this->nombres = $nombres;
     }
 
-    function setApellidoPaterno($apellido_paterno){
+    function setApellidoPaterno($apellido_paterno)
+    {
         $this->apellido_paterno = $apellido_paterno;
     }
 
-    function setApellidoMaterno($apellido_materno){
+    function setApellidoMaterno($apellido_materno)
+    {
         $this->apellido_materno = $apellido_materno;
     }
 
-    function setEmail($email){
+    function setEmail($email)
+    {
         $this->email = $email;
     }
 
-    function setTelefono($telefono){
+    function setTelefono($telefono)
+    {
         $this->telefono = $telefono;
     }
 
-    function setRegion($region){
+    function setRegion($region)
+    {
         $this->region = $region;
     }
 
-    function setComuna($comuna){
+    function setComuna($comuna)
+    {
         $this->comuna = $comuna;
+    }
+
+    function setEstadoAcademico($estado_academico)
+    {
+        switch ($estado_academico) {
+            case '1':
+                $estado_academico = 'Estudiante de Enseñanza Media';
+                break;
+            case '2':
+                $estado_academico = 'Postulante a la Educación Superior';
+                break;
+            case '3':
+                $estado_academico = 'Estudiante Universitario';
+                break;
+            case '4':
+                $estado_academico = 'Profesional';
+                break;
+            default:
+                # code...
+                break;
+        }
+        $this->estado_academico = $estado_academico;
     }
 }

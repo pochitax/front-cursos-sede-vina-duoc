@@ -23,7 +23,7 @@ class Helper
         return $S ? $S - 1 : 'k';
     }
 
-    static function validarFormularioInscripcion($rut, $nombres, $apellidoPaterno, $apellidoMaterno, $email, $telefono, $region, $comuna, $idCurso)
+    static function validarFormularioInscripcion($rut, $nombres, $apellidoPaterno, $apellidoMaterno, $email, $telefono, $region, $comuna, $idCurso, $estadoAcademico)
     {
         $validar = array(
             'error' => array('estado' => False, 'msg' => '')
@@ -108,6 +108,14 @@ class Helper
             return $validar;
         }
 
+        //ESTADO ACADEMICO
+        if (is_numeric($estadoAcademico) == True && ($estadoAcademico >= 1 && $estadoAcademico <= 4)) {
+        } else {
+            $validar['error']['msg'] = 'Situación académica inválida';
+            $validar['error']['estado'] = True;
+            return $validar;
+        }
+        
         return $validar;
     }
 }

@@ -45,8 +45,9 @@ if (isset($_POST["uname"]) && isset($_POST["psw"]) && isset($_POST["request"])) 
             $sheet->setCellValue('G1', 'TELEFONO');
             $sheet->setCellValue('H1', 'REGION');
             $sheet->setCellValue('I1', 'COMUNA');
-            $sheet->setCellValue('J1', 'FECHA');
-            $sheet->setCellValue('K1', 'HORA');
+            $sheet->setCellValue('J1', 'ESTADO ACADEMICO');
+            $sheet->setCellValue('K1', 'FECHA');
+            $sheet->setCellValue('L1', 'HORA');
 
             $regiones = $regionServicio->getAllRegions();
             $comunas = $comunaServicio->getAllComunas();
@@ -99,12 +100,13 @@ if (isset($_POST["uname"]) && isset($_POST["psw"]) && isset($_POST["request"])) 
                 $sheet->setCellValue('G' . $fila,  $alumno->getTelefono());
                 $sheet->setCellValue('H' . $fila,  $region->getDescripcion());
                 $sheet->setCellValue('I' . $fila,  $comuna->getDescripcion());
-                $sheet->setCellValue('J' . $fila,  $fechaDias);
-                $sheet->setCellValue('K' . $fila,  $fechaHoras);
+                $sheet->setCellValue('J' . $fila,  $alumno->getEstadoAcademico());
+                $sheet->setCellValue('K' . $fila,  $fechaDias);
+                $sheet->setCellValue('L' . $fila,  $fechaHoras);
             }
 
             //Redimensionamiento de celdas
-            foreach (range('A', 'K') as $columnID) {
+            foreach (range('A', 'L') as $columnID) {
                 $spreadsheet->getActiveSheet()->getColumnDimension($columnID)
                     ->setAutoSize(true);
             }
