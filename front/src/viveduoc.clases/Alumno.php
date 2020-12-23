@@ -11,6 +11,7 @@ class Alumno
     private $region;
     private $comuna;
     private $estado_academico;
+    private $edad;
 
     //getters
     function getRut()
@@ -56,6 +57,10 @@ class Alumno
     function getEstadoAcademico()
     {
         return $this->estado_academico;
+    }
+
+    function getEdad(){
+        return $this->edad;
     }
 
 
@@ -120,5 +125,9 @@ class Alumno
                 break;
         }
         $this->estado_academico = $estado_academico;
+    }
+
+    function setEdad($edad){
+        $this->edad = $edad;
     }
 }

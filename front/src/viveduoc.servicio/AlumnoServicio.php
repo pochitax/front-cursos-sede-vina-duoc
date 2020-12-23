@@ -22,9 +22,10 @@ class AlumnoServicio
         $region = $alumno->getRegion();
         $comuna = $alumno->getComuna();
         $estado_academico = $alumno->getEstadoAcademico();
+        $edad = $alumno->getEdad();
 
         ////////////// Insertar a la tabla la informacion generada /////////
-        $sql = "INSERT INTO avd_alumno(rut, nombres, apellido_paterno, apellido_materno, email, telefono, region, comuna, estado_academico, last_update) VALUES(:rut,:nombres,:apellido_paterno,:apellido_materno,:email,:telefono,:region,:comuna,:estado_academico, now())";
+        $sql = "INSERT INTO avd_alumno(rut, nombres, apellido_paterno, apellido_materno, email, telefono, region, comuna, estado_academico, edad, last_update) VALUES(:rut,:nombres,:apellido_paterno,:apellido_materno,:email,:telefono,:region,:comuna,:estado_academico,:edad,now())";
         $sql = $this->db->connect()->prepare($sql);
 
         $sql->bindParam(':rut', $rut, PDO::PARAM_STR, 12);
@@ -36,6 +37,7 @@ class AlumnoServicio
         $sql->bindParam(':region', $region, PDO::PARAM_STR, 64);
         $sql->bindParam(':comuna', $comuna, PDO::PARAM_STR, 64);
         $sql->bindParam(':estado_academico', $estado_academico, PDO::PARAM_STR, 50);
+        $sql->bindParam(':edad', $edad, PDO::PARAM_STR, 64);
 
 
         $sql->execute();
@@ -62,6 +64,7 @@ class AlumnoServicio
             $alumno->setRegion($elemento->region);
             $alumno->setComuna($elemento->comuna);
             $alumno->setEstadoAcademico($elemento->estado_academico);
+            $alumno->setEdad($elemento->edad);
         }
         return $alumno;
     }
@@ -76,9 +79,10 @@ class AlumnoServicio
         $region = $alumno->getRegion();
         $comuna = $alumno->getComuna();
         $estado_academico = $alumno->getEstadoAcademico();
+        $edad = $alumno->getEdad();
 
         $sql = "UPDATE avd_alumno SET nombres = :nombres, apellido_paterno = :apellido_paterno, apellido_materno = :apellido_materno, 
-        email = :email, telefono = :telefono, region = :region, comuna = :comuna, estado_academico = :estado_academico, last_update = now() WHERE rut = :rut";
+        email = :email, telefono = :telefono, region = :region, comuna = :comuna, estado_academico = :estado_academico, edad = :edad, last_update = now() WHERE rut = :rut";
         $sql = $this->db->connect()->prepare($sql);
 
         $sql->bindParam(':nombres', $nombres, PDO::PARAM_STR, 50);
@@ -89,6 +93,7 @@ class AlumnoServicio
         $sql->bindParam(':region', $region, PDO::PARAM_STR, 64);
         $sql->bindParam(':comuna', $comuna, PDO::PARAM_STR, 64);
         $sql->bindParam(':estado_academico', $estado_academico, PDO::PARAM_STR, 50);
+        $sql->bindParam(':edad', $edad, PDO::PARAM_STR, 64);
         $sql->bindParam(':rut', $rut, PDO::PARAM_STR, 12);
 
         $sql->execute();

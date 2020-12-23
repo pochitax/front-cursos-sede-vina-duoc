@@ -73,6 +73,7 @@ var z = document.getElementById("LastName2").required;
         "v_comuna" : document.getElementById('comuna').value,
         "v_curso" : document.getElementById('CursoId').value,
         "v_estadoacademico" : document.getElementById('SituationStudent').value,
+        "v_edad" : 20,
     };
 
     $.ajax({

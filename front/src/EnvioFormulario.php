@@ -10,7 +10,7 @@ $resultadoValidaciones;
 
 if (
     isset($_POST["v_rut"]) && isset($_POST["v_nombre"]) && isset($_POST["v_lastname"]) && isset($_POST["v_lastname2"])
-    && isset($_POST["v_email"]) && isset($_POST["v_phone"]) && isset($_POST["v_region"]) && isset($_POST["v_comuna"]) && isset($_POST["v_curso"]) && isset($_POST["v_estadoacademico"])
+    && isset($_POST["v_email"]) && isset($_POST["v_phone"]) && isset($_POST["v_region"]) && isset($_POST["v_comuna"]) && isset($_POST["v_curso"]) && isset($_POST["v_estadoacademico"]) && isset($_POST["v_edad"])
 ) {
     $rut = $_POST["v_rut"];
     //Helper::validaRut($rut) ? 'Es válido' : 'Rut no válido :( ';
@@ -23,6 +23,7 @@ if (
     $comuna = $_POST["v_comuna"];
     $idCurso = $_POST["v_curso"];
     $estadoAcademico = $_POST["v_estadoacademico"];
+    $edad = $_POST["v_edad"];
 
     $comunaServicio = new ComunaServicio();
     $comunasCapturadas = $comunaServicio->getAllComunasPorRegion($region);
@@ -45,6 +46,7 @@ if (
         $alumno->setRegion($region);
         $alumno->setComuna($comuna);
         $alumno->setEstadoAcademico($estadoAcademico);
+        $alumno->setEdad($edad);
 
         $alumnoServicio = new AlumnoServicio();
         //Busca alumno
@@ -136,6 +138,9 @@ function seActualizoUnCampo($alumnoBD, $alumno)
         return true;
     }
     if ($alumnoBD->getComuna() != $alumno->getComuna()) {
+        return true;
+    }
+    if($alumnoBD->getEdad() != $alumno->getEdad()){
         return true;
     }
 
